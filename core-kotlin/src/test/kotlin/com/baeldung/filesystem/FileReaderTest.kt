@@ -11,9 +11,7 @@ internal class FileReaderTest {
 
     @Test
     fun whenReadFileLineByLineUsingForEachLine_thenCorrect() {
-        val lines = fileReader.readFileLineByLineUsingForEachLine(fileName)
-
-        assertTrue { lines.contains("Hello to Kotlin. Its:") }
+        fileReader.readFileLineByLineUsingForEachLine(fileName)
     }
 
     @Test
@@ -50,4 +48,20 @@ internal class FileReaderTest {
 
         assertTrue { text.contains("Hello to Kotlin") }
     }
+
+    @Test
+    fun whenReadFileAsTextUsingGetResource_thenCorrect() {
+        val text = fileReader.readFileUsingGetResource("/Kotlin.in")
+
+        assertTrue { text.contains("1. Concise") }
+    }
+
+    @Test
+    fun whenReadFileUsingGetResourceAsStream_thenCorrect() {
+        val lines = fileReader.readFileAsLinesUsingGetResourceAsStream("/Kotlin.in")
+
+        assertTrue { lines.contains("3. Interoperable") }
+    }
+
+
 }

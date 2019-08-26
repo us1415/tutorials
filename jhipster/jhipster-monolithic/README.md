@@ -1,6 +1,6 @@
-### Relevant articles
+## Relevant Articles
 
-- [Intro to JHipster](http://www.baeldung.com/jhipster)
+- [Intro to JHipster](https://www.baeldung.com/jhipster)
 
 
 # baeldung
